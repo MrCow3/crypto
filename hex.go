@@ -1,11 +1,14 @@
 package crypto
 
-import "encoding/hex"
+import (
+	"encoding/hex"
+	"fmt"
+)
 
 func decode(hexString string) {
 	decoded, err := hex.DecodeString(hexString)
 	if err != nil {
-		panic(err)
+		fmt.Println("Error:", err, "make sure you import a hex string")
 	}
-	return decoded
+	fmt.Println(decoded)
 }
