@@ -1,7 +1,11 @@
 package crypto
 
-import "fmt"
+import "encoding/hex"
 
-func main() {
-	fmt.Println(A)
+func decode(hexString string) {
+	decoded, err := hex.DecodeString(hexString)
+	if err != nil {
+		panic(err)
+	}
+	return decoded
 }
