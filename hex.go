@@ -10,5 +10,5 @@ func DecodeHex(hexString string) {
 	if err != nil {
 		fmt.Println("Error:", err, "make sure you import a hex string")
 	}
-	fmt.Println(decoded)
+	return (string(decoded))
 }
